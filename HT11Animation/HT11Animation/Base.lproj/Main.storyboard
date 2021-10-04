@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HT11Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAn-fu-Qtt">
+                                <rect key="frame" x="177" y="637" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dpb-g8-Ucg"/>
+                                    <constraint firstAttribute="width" constant="60" id="Gnc-kp-2MW"/>
+                                </constraints>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BlE-Ld-Qef"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbE-SL-994">
+                                <rect key="frame" x="177" y="726" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7nH-2v-fW2"/>
+                                    <constraint firstAttribute="width" constant="60" id="sqi-cd-vxw"/>
+                                </constraints>
+                                <state key="normal" title="STOP"/>
+                                <connections>
+                                    <action selector="actionStopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pCY-oT-IpR"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bk-KX-BUb">
+                                <rect key="frame" x="67" y="348" width="280" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ball.png" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-tA-riZ">
+                                        <rect key="frame" x="125" y="85" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="30s-kE-hRj"/>
+                                            <constraint firstAttribute="width" constant="30" id="oaj-oQ-3RK"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstItem="8d2-tA-riZ" firstAttribute="centerY" secondItem="7bk-KX-BUb" secondAttribute="centerY" id="ZWU-Ml-uva"/>
+                                    <constraint firstItem="8d2-tA-riZ" firstAttribute="centerX" secondItem="7bk-KX-BUb" secondAttribute="centerX" id="e7J-LS-hu2"/>
+                                    <constraint firstAttribute="width" constant="280" id="fFQ-8v-Lng"/>
+                                    <constraint firstAttribute="height" constant="200" id="nW6-Y4-Mxh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SbE-SL-994" firstAttribute="top" secondItem="7bk-KX-BUb" secondAttribute="bottom" constant="178" id="HOG-69-byA"/>
+                            <constraint firstItem="7bk-KX-BUb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jp8-yr-bbk"/>
+                            <constraint firstItem="eAn-fu-Qtt" firstAttribute="top" secondItem="7bk-KX-BUb" secondAttribute="bottom" constant="89" id="Kk6-bN-Wu2"/>
+                            <constraint firstItem="SbE-SL-994" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MD4-Gy-ZlO"/>
+                            <constraint firstItem="eAn-fu-Qtt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fFK-ch-DfD"/>
+                            <constraint firstItem="7bk-KX-BUb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wYm-GA-Lqj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="7bk-KX-BUb" id="xzD-bA-bZH"/>
+                        <outlet property="image" destination="8d2-tA-riZ" id="gRO-wW-m0Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ball.png" width="2500" height="2497"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
